@@ -1,7 +1,27 @@
 .container{
-    background: #f9f9f9;
     padding: 20px 2% 20px 17%;
+    margin-top: 33px;
 }
 .large-container{
     padding-left: 7%;
+}
+@media (max-width: 1300px) {
+    .container  {
+        padding-left: 7%;
+    }
+}
+@media (max-width: 1050px) {
+    .container  {
+        padding-left: 9%;
+    }
+}
+@media (max-width: 680px) {
+    .container  {
+        padding-left: 11%;
+    }
+}
+@media (max-width: 480px) {
+    .container  {
+        padding-left: 15%;
+    }
 }

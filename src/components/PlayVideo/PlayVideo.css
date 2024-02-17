@@ -10,11 +10,38 @@
     font-weight: 600;
     font-size: 22px;
 }
-.play-video hr{
+.publisher{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    justify-content: space-between;
+}
+.publisher-info{
+    display: flex;
+}
+.publisher img{
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.publisher div p{
+    color: #000;
+    font-weight: 600;
+    font-size: 18px;
+}
+.publisher div span{
+    font-size: 13px;
+    color: #5a5a5a;
+}
+.publisher button{
+    background: #000;
+    color: #fff;
+    padding: 11px 19px;
     border: 0;
-    height: 1px;
-    background: #ccc;
-    margin: 10px 0;
+    outline: 0;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-left: 16px;
 }
 .play-video-info{
     display: flex;
@@ -32,53 +59,35 @@
 .play-video-info span{
     display: inline-flex;
     align-items: center;
-    margin-left: 15px;
-}
-.publisher{
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-}
-.publisher div{
-    flex: 1;
-    line-height: 18px;
-}
-.publisher img{
-    width: 40px;
-    border-radius: 50%;
-    margin-right: 15px;
-}
-.publisher div p{
-    color: #000;
-    font-weight: 600;
-    font-size: 18px;
-}
-.publisher div span{
-    font-size: 13px;
-    color: #5a5a5a;
-}
-.publisher button{
-    background: red;
-    color: #fff;
-    padding: 8px 30px;
-    border: 0;
-    outline: 0;
-    border-radius: 4px;
+    margin-left: 10px;
+    background: #efefef;
+    padding: 8px;
+    border-radius: 20px;
     cursor: pointer;
 }
 .video-description{
-    padding-left: 55px;
     margin: 15px 0;
 }
-.video-description p{
-    font-size: 14px;
-    margin-bottom: 5px;
-    color: #5a5a5a;
-}
 .video-description h4{
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 30px;
+}
+.video-description-info{
+    background: #efefef;
+    padding: 10px;
+    border-radius: 11px;
+    margin-bottom: 30px;
+}
+.video-description-info .view{
+   font-size: 15px;
+    margin-bottom: 5px;
+}
+.video-description-info .view-description{
     font-size: 14px;
+    line-height: 18px;
     color: #5a5a5a;
-    margin-top: 15px;
 }
 .comment{
     display: flex;
@@ -114,4 +123,22 @@
 .comment-action span{
     margin-right: 20px;
     color: #5a5a5a;
+}
+@media (max-width: 1000px) {
+    .play-video{
+        flex-basis: 100%;
+    }
+    .play-video iframe{
+        width: 100%;
+        height: 50vw;
+    }
+    .publisher{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+@media (max-width: 400px) {
+    .publisher-info div p{
+        font-size: 14px;
+    }
 }

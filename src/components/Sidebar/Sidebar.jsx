@@ -9,11 +9,11 @@ import tech from '../../assets/tech.png'
 import music from '../../assets/music.png'
 import blogs from '../../assets/blogs.png'
 import news from '../../assets/news.png'
-import jack from '../../assets/jack.png'
-import simon from '../../assets/simon.png'
-import tom from '../../assets/tom.png'
-import megan from '../../assets/megan.png'
-import cameron from '../../assets/cameron.png'
+import subs1 from '../../assets/subs1.jpg'
+import subs2 from '../../assets/subs2.jpg'
+import subs3 from '../../assets/subs3.jpg'
+import subs4 from '../../assets/subs4.jpg'
+import subs5 from '../../assets/subs5.jpg'
 
 const Sidebar = ({sidebar, category ,setCategory})=> {
     return (
@@ -46,25 +46,24 @@ const Sidebar = ({sidebar, category ,setCategory})=> {
                 <div className={`side-link ${category===25?"active":""}`} onClick={()=>setCategory(25)}>
                     <img src={news} alt=""/><p>News</p>
                 </div>
-
                 <hr/>
             </div>
             <div className="subscribed-list">
                 <h3>Subscribed</h3>
                 <div className="side-link">
-                    <img src={jack} alt=""/><p>PewDiePie</p>
+                    <img src={subs1} alt=""/><p>Abao in Tokyo</p>
                 </div>
                 <div className="side-link">
-                    <img src={simon} alt=""/><p>MrBeast</p>
+                    <img src={subs2} alt=""/><p>Fender</p>
                 </div>
                 <div className="side-link">
-                    <img src={tom} alt=""/><p>Justin Bieber</p>
+                    <img src={subs3} alt=""/><p>3Blue1Brown</p>
                 </div>
                 <div className="side-link">
-                    <img src={megan} alt=""/><p>5-Minute Crafts</p>
+                    <img src={subs4} alt=""/><p>National Geographic</p>
                 </div>
                 <div className="side-link">
-                    <img src={cameron} alt=""/><p>Nas Daily</p>
+                    <img src={subs5} alt=""/><p>Sean Mann</p>
                 </div>
             </div>
         </div>

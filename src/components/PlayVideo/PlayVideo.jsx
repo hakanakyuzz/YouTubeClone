@@ -50,30 +50,30 @@ const PlayVideo = ()=> {
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowFullScreen>
             </iframe>
-            <h3>{apiData?apiData.snippet.title:"Title Here"}</h3>
-            <div className="play-video-info">
-                <p>{apiData?value_converter(apiData.statistics.viewCount): "16K"} Views &bull; {moment(apiData?apiData.snippet.publishedAt:"uploadDateHere").fromNow()}</p>
-                <div>
-                    <span><img src={like} alt=""/>{value_converter(apiData?apiData.statistics.likeCount:155)}</span>
+            <h3>{apiData ? apiData.snippet.title : "Title Here"}</h3>
+            <div className="publisher">
+                <div className={"publisher-info"}>
+                    <img src={channelData ? channelData.snippet.thumbnails.default.url : ""} alt=""/>
+                    <div>
+                        <p>{apiData ? apiData.snippet.channelTitle : "ChannelTitleHere"}</p>
+                        <span>{channelData ? value_converter(channelData.statistics.subscriberCount) : "1M"} Subscribers</span>
+                    </div>
+                    <button>Subscribe</button>
+                </div>
+                <div className="play-video-info">
+                    <span><img src={like} alt=""/>{value_converter(apiData ? apiData.statistics.likeCount : 155)}</span>
                     <span><img src={dislike} alt=""/></span>
                     <span><img src={share} alt=""/>Share</span>
                     <span><img src={save} alt=""/>Save</span>
                 </div>
             </div>
-            <hr/>
-            <div className="publisher">
-                <img src={channelData?channelData.snippet.thumbnails.default.url:""} alt=""/>
-                <div>
-                    <p>{apiData?apiData.snippet.channelTitle:"ChannelTitleHere"}</p>
-                    <span>{channelData?value_converter(channelData.statistics.subscriberCount):"1M"} Subscribers</span>
-                </div>
-                <button>Subscribe</button>
-            </div>
             <div className="video-description">
-                <p>{apiData?apiData.snippet.description.slice(0,250):"DescriptionHere"}</p>
-                <hr/>
-                <h4>{apiData?value_converter(apiData.statistics.commentCount):102} Comments</h4>
-                {commentData.map((item,index) => {
+                <div className="video-description-info">
+                    <p className={"view"}>{apiData ? value_converter(apiData.statistics.viewCount) : "16K"} Views &bull; {moment(apiData ? apiData.snippet.publishedAt : "uploadDateHere").fromNow()}</p>
+                    <p className={"view-description"}>{apiData ? apiData.snippet.description.slice(0, 250) : "DescriptionHere"}</p>
+                </div>
+                <h4>{apiData ? value_converter(apiData.statistics.commentCount) : 102} Comments</h4>
+                {commentData.map((item, index) => {
                     return (
                         <div key={index} className="comment">
                             <img src={item.snippet.topLevelComment.snippet.authorProfileImageUrl} alt=""/>

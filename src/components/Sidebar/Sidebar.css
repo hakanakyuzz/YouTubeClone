@@ -4,18 +4,22 @@
     height: 100vh;
     position: fixed;
     top: 0;
-    padding-left: 2%;
+    left: 0;
+    right: 0;
+    padding-left: 1%;
     padding-top: 80px;
+    font-weight: lighter;
 }
 .shortcut-links img{
     width: 20px;
     margin-right: 20px;
+    margin-left: 10px;
 }
 .side-link{
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
-    width: fit-content;
+    padding: 10px 0;
+    width: 100%;
     flex-wrap: wrap;
     cursor: pointer;
 }
@@ -24,6 +28,7 @@
     height: 1px;
     background: #ccc;
     width: 85%;
+    margin-top: 10px;
 }
 .subscribed-list h3{
     font-size: 13px;
@@ -48,7 +53,27 @@
     width: 50%;
     margin-bottom: 25px;
 }
-.side-link.active img{
-    padding-bottom: 2px;
-    border-bottom: 3px solid red;
+.side-link.active{
+    background: #ececec;
+    border-radius: 10px;
+}
+@media (max-width: 1300px) {
+    .sidebar p{
+        display: none;
+    }
+    .sidebar{
+        width: 50px;
+    }
+    .small-sidebar{
+    width: 50px;
+    }
+    .subscribed-list h3{
+        display: none;
+    }
+    .subscribed-list div{
+        display: none;
+    }
+    .shortcut-links hr{
+        display: none;
+    }
 }
